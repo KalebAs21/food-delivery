@@ -1,0 +1,58 @@
+/* Sidebar container */
+.sidebar {
+
+  width: 220px;
+  height: 100vh;
+  background-color: #1e1e2f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 90px;
+}
+
+/* Options wrapper */
+.sidebar-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Each option */
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.sidebar-option:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Option icons */
+.sidebar-option img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+/* Option text */
+.sidebar-option p {
+  font-size: 15px;
+  font-weight: 500;
+
+}
+/*  
+.sidebar-option.active{
+    background-color: #fff0ed;
+    border-color: tomato;
+} */

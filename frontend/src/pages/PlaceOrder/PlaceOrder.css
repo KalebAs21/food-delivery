@@ -1,0 +1,113 @@
+/* The main form container */
+.place-order {
+    display: flex;
+    gap: 2rem;                /* space between the two columns */
+    max-width: 1200px;        /* limit total width */
+    margin: 2rem auto;        /* center horizontally */
+    padding: 1rem;
+    font-family: sans-serif;  /* set your preferred font family */
+  }
+  
+  /* Left column for Delivery Information */
+  .place-order-left {
+    flex: 2;                  /* grows proportionally (larger column) */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Right column for Cart Totals */
+  .place-order-right {
+    flex: 1;                  /* smaller column */
+    display: flex;
+    align-items: flex-start;  /* top-align the totals box */
+    justify-content: center;  /* center horizontally */
+  }
+  
+  /* Title at the top of the form (e.g., "Delivery Information") */
+  .place-order-left .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Single-line containers for multiple fields (e.g., first/last name, city/state) */
+  .multi-field {
+    display: flex;
+    gap: 1rem;                /* space between input fields */
+  }
+  
+  /* Basic input styling */
+  .place-order-left input {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  /* -------------- Cart Totals Box -------------- */
+  .cart-total {
+    width: 100%;
+    max-width: 400px;         /* optional limit for the totals box */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+  }
+  
+  /* Title in the totals section (Cart Totals) */
+  .cart-total h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Row for each total line: Subtotal, Delivery, etc. */
+  .car-total-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    color: #555;
+  }
+  
+  .cart-total hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 0.5rem 0;
+  }
+  
+  /* Checkout Button (Proceed to Checkout) */
+  .cart-total button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #FF5722;   /* Orange-like color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s ease;
+  }
+  
+  .cart-total button:hover {
+    background-color: #e64a19;
+  }
+  
+  /* ------------ Responsive Adjustments ------------ */
+  @media (max-width: 768px) {
+    .place-order {
+      flex-direction: column;
+    }
+    .place-order-left, 
+    .place-order-right {
+      flex: none;
+      width: 100%;
+    }
+    .place-order-right {
+      justify-content: flex-start;
+      margin-top: 1.5rem;
+    }
+  }
+  

@@ -1,0 +1,221 @@
+/* The main cart container */
+.cart {
+  width: 100%;
+  max-width: 1200px;  /* adjust as needed */
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+/* Container for all items */
+.cart-items {
+  width: 100%;
+}
+
+/* Title row (Items, Title, Price, etc.) */
+.cart-items-title {
+  display: grid;
+  grid-template-columns: 60px 1fr 80px 80px 80px 40px;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #333;
+  column-gap: 12px; /* Increase space between grid columns */
+}
+
+/* Ensure paragraphs within the title row have no extra margin */
+.cart-items-title p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Optional horizontal line */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0.5rem 0;
+}
+
+/* Each individual cart row */
+.cart-items-item {
+  display: grid;
+  grid-template-columns: 60px 1fr 80px 80px 80px 40px;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #eee;
+  column-gap: 12px; /* Matching gap for consistency */
+}
+
+/* Style for text within each cart row */
+.cart-items-item p {
+  margin: 0;
+  text-align: center;
+  color: #555;
+}
+
+/* The product image */
+.cart-items-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+/* Adjust the alignment of the item name (second column) */
+.cart-items-item p:nth-child(2),
+.cart-items-title p:nth-child(2) {
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+/* Price, quantity, and total cells styling */
+.cart-items-item p:nth-child(3),
+.cart-items-item p:nth-child(4),
+.cart-items-item p:nth-child(5) {
+  font-weight: 500;
+}
+
+/* Remove column (sixth cell) styling */
+.cart-items-title p:nth-child(6),
+.cart-items-item p:nth-child(6) {
+  cursor: pointer;
+  font-weight: bold;
+  color: #999;
+  transition: color 0.2s;
+}
+
+.cart-items-item p:nth-child(6):hover {
+  color: #d00;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .cart-items-title,
+  .cart-items-item {
+    grid-template-columns: 50px 1fr 60px 60px 60px 30px;
+    font-size: 0.85rem;
+    column-gap: 8px;
+  }
+
+  .cart-items-item img {
+    width: 40px;
+    height: 40px;
+  }
+}
+.cart-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+/* Cart Totals Panel */
+.cart-total {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+.cart-total h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.car-total-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  color: #555;
+}
+
+.cart-total hr {
+  margin: 0.5rem 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* Checkout Button */
+.cart-total button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.cart-total button:hover {
+  background-color: #0056b3;
+}
+
+/* Cart Promocode Panel */
+.cart-promocode {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+}
+
+.cart-promocode > div > p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Promocode Input Styling */
+.cart-promocode-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.cart-promocode-input input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.cart-promocode-input button {
+  padding: 0.5rem 1rem;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cart-promocode-input button:hover {
+  background-color: #218838;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+  .cart-items-title,
+  .cart-items-item {
+    grid-template-columns: 50px 1fr 60px 60px 60px 30px;
+    font-size: 0.85rem;
+    column-gap: 8px;
+  }
+
+  .cart-items-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .cart-bottom {
+    flex-direction: column;
+  }
+}
